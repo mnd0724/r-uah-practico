@@ -1,11 +1,11 @@
 {
     "id": "F41EF39E",
-    "path": null,
-    "project_path": null,
+    "path": "~/GitHub/r-uah-practico/output/trabajo22.qmd",
+    "project_path": "output/trabajo22.qmd",
     "type": "quarto_markdown",
     "hash": "3939531330",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1713570055645.0,
     "source_on_save": false,
     "relative_order": 4,
@@ -22,11 +22,11 @@
         "rmdVisualModeLocation": "334:248.48483276367188"
     },
     "folds": "",
-    "lastKnownWriteTime": 8367798494561399397,
-    "encoding": "",
+    "lastKnownWriteTime": 1713570143,
+    "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1713570105791,
+    "last_content_update": 1713570143303,
     "read_only": false,
     "read_only_alternatives": []
 }
