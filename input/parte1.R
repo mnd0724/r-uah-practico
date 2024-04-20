@@ -20,3 +20,6 @@ names(proc_data)
 sjlabelled::get_label(proc_data) #Observar las etiquetas de las variables
 view(proc_data) #Ver data procesada 
 proc_data <- proc_data %>% dplyr::filter(Cod_Ciudad==13001) #Filtrar por región (metropolitana)
+
+# PROCESAMIENTO ----- 
+frq(proc_data$`Superficie de Área Verde (m2)`)

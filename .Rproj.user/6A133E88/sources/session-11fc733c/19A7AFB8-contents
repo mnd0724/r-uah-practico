@@ -1,7 +1,7 @@
 # 1. Exploración inicial ----
-pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, tidyverse)
+options(scipen=999)
 rm(list=ls())       # borrar todos los objetos en el espacio de trabajo
-options(scipen=999) # valores sin notación científica
+pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, tidyverse)
 datos <- read_excel("input/base.xlsx", sheet = "areaverde-hab")
 view(datos)
 dim(datos)
@@ -20,3 +20,20 @@ names(proc_data)
 sjlabelled::get_label(proc_data) #Observar las etiquetas de las variables
 view(proc_data) #Ver data procesada 
 proc_data <- proc_data %>% dplyr::filter(Cod_Ciudad==13001) #Filtrar por región (metropolitana)
+
+# PROCESAMIENTO ----- 
+frq(proc_data$`BPU_29 Superficie de Área Verde por Habitantes (m2/Hab)`)
+proc_data <- proc_data %>% rename("comuna"=Comuna, 
+                                  "region"=Región,
+                                  "sup_averde"=`Superficie de Área Verde (m2)`,
+                                  "sup_plaza"=`Superficie Plazas (m2)`,
+                                  "sup_hab"=`BPU_29 Superficie de Área Verde por Habitantes (m2/Hab)`)
+proc_data$sup_total <- (proc_data$sup_averde+proc_data$sup_plaza) #Sumar los m2 totales de plazas y areas verdes
+summary(proc_data$sup_total)
+
+
+
+frq(proc_data$sup_hab)
+frq(proc_data$sup_averde)
+frq(proc_data$sup_plaza)
+
