@@ -28,8 +28,8 @@ En la primera parte de este trabajo lo que nos interesa es generar una exploraci
 # 1. Exploración inicial ----
 options(scipen=999)
 rm(list=ls())       # borrar todos los objetos en el espacio de trabajo
-pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, tidyverse)
-datos <- read_excel("input/base.xlsx", sheet = "areaverde-hab")
+pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, tidyverse, readxl)
+datos <- read_excel("base.xlsx", sheet = "areaverde-hab")
 view(datos)
 dim(datos)
 
