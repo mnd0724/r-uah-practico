@@ -28,12 +28,36 @@ proc_data <- proc_data %>% rename("comuna"=Comuna,
                                   "sup_averde"=`Superficie de Área Verde (m2)`,
                                   "sup_plaza"=`Superficie Plazas (m2)`,
                                   "sup_hab"=`BPU_29 Superficie de Área Verde por Habitantes (m2/Hab)`)
-proc_data$sup_total <- (proc_data$sup_averde+proc_data$sup_plaza) #Sumar los m2 totales de plazas y areas verdes
-summary(proc_data$sup_total)
 
 
+proc_data2 <- proc_data %>% select(comuna,
+                                   sup_averde,
+                                   sup_plaza)
 
-frq(proc_data$sup_hab)
-frq(proc_data$sup_averde)
-frq(proc_data$sup_plaza)
+# Filtrar el dataframe para incluir solo las filas donde la columna "comuna" coincide con algunas comunas específicas
+proc_data2 <- filter(proc_data2, comuna %in% c("PROVIDENCIA",
+                                               "SAN MIGUEL",
+                                               "LAS CONDES",
+                                               "VITACURA",
+                                               "ÑUÑOA",
+                                               "RENCA",
+                                               "LA PINTANA",
+                                               "MACUL"))
+proc_data3 <- proc_data %>% select(comuna,
+                                   sup_hab)
+
+
+frq(proc_data2$sup_averde)
+frq(proc_data2$sup_plaza)
+frq(proc_data3$sup_hab)
+
+sjmisc::descr(proc_data2,
+              show = c("label","range", "mean", "sd", "NA.prc", "n")) # Selecciona estadísticos
+sjmisc::descr(proc_data3,
+              show = c("label","range", "mean", "sd", "NA.prc", "n"))
+
+
+summarytools::dfSummary(proc_data3, plain.ascii = FALSE)
+proc_data2 %>% ggplot(aes(x = comuna)) + 
+  geom_bar()
 

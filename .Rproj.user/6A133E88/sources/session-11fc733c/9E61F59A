@@ -3,7 +3,7 @@
     "path": "~/GitHub/r-uah-practico/output/trabajo2.2.qmd",
     "project_path": "output/trabajo2.2.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "446941708",
     "contents": "",
     "dirty": false,
     "created": 1713573389979.0,
@@ -19,14 +19,14 @@
         "rmdVisualCollapsedChunks": "",
         "cursorPosition": "26,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "3524:1267.272705078125"
+        "rmdVisualModeLocation": "6149:2446.060546875"
     },
     "folds": "",
-    "lastKnownWriteTime": 1713574620,
+    "lastKnownWriteTime": 1713628731,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1713574683111,
+    "last_content_update": 1713628731820,
     "read_only": false,
     "read_only_alternatives": []
 }
