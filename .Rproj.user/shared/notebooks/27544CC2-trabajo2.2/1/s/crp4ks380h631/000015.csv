@@ -1,0 +1,5 @@
+"0","proc_data2 %>% ggplot(aes(x = comuna)) + 
+  geom_bar()
+"
+"2","Error in ggplot(., aes(x = comuna)) : objeto 'proc_data2' no encontrado
+"

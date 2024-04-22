@@ -29,9 +29,10 @@ En la primera parte de este trabajo lo que nos interesa es generar una exploraci
 options(scipen=999)
 rm(list=ls())       # borrar todos los objetos en el espacio de trabajo
 pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, tidyverse, readxl)
+setwd("C:/Users/arell/OneDrive/Documentos/GitHub/r-uah-practico/input")
 library(readxl)
-base <- read_excel("input/base.xlsx", sheet = "areaverde-hab")
-View(base)
+datos <- read_excel("base.xlsx", sheet = "areaverde-hab")
+View(datos)
 view(datos)
 dim(datos)
 

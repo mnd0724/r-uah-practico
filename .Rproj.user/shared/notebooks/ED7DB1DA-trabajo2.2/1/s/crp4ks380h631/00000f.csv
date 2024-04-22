@@ -1,4 +1,0 @@
-"0","datos <- read_excel(""base.xlsx"", sheet = ""areaverde-hab"")
-"
-"2","Error: `path` does not exist: ‘base.xlsx’
-"
