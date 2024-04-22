@@ -90,7 +90,6 @@ sjmisc::descr(proc_data3,
 summarytools::dfSummary(proc_data3, plain.ascii = FALSE)
 proc_data2 %>% ggplot(aes(x = comuna)) + 
   geom_bar()
-
 ```
 
 \
